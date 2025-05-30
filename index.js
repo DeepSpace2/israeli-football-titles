@@ -1,6 +1,9 @@
 let championshipsChartCanvas = document.getElementById("championships-chart").getContext("2d");
 let cupsChartCanvas = document.getElementById("cups-chart").getContext("2d");
 
+let championshipsChartTitleElement = document.getElementById("championships-chart-title");
+let cupsChartTitleElement = document.getElementById("cups-chart-title");
+
 let championshipsTeamsToIndexInData = {};
 let championshipsIndexToTeamsInData = {};
 
@@ -27,21 +30,50 @@ var graphOptions = {
         },
         title: {
             display: true,
-            text: ""
+            text: "",
+            color: "#fff",
+            font: {
+                size: 22,
+                weight: 'bold'
+            },
+            padding: {top: 10, bottom: 40}
+        },
+        datalabels: {
+            anchor: 'end',
+            align: 'end',
+            color: '#fff',
+            font: {
+                weight: 'bold',
+                size: 16
+            },
+            backgroundColor: null,
+            borderRadius: 6,
+            padding: 6
         }
+    },
+    layout: {
+        padding: {top: 10, bottom: 10, left: 10, right: 10}
     },
     scales: {
         y: {
             ticks: {
                 display: false
             },
-            gridLines: {
-                display: false
+            grid: {
+                display: false,
+                drawBorder: false
             }
         },
         x: {
-            gridLines: {
-                display: false
+            grid: {
+                display: false,
+                drawBorder: false
+            },
+            ticks: {
+                color: '#fff',
+                font: {
+                    weight: 'bold'
+                }
             }
         }
     }
@@ -79,7 +111,7 @@ function createChart(canvas, label, teamsToColors, teamsData) {
     ];
 }
 
-function populateChart(chart, chartLabels, chartData, year, titleHolder, indexedData, titlePluralHebrewName) {
+function populateChart(chart, chartLabels, chartData, year, titleHolder, indexedData, titlePluralHebrewName, chartTitleElement) {
     if (titleHolder) {
         if (indexedData.hasOwnProperty(titleHolder)) {
             chartData[indexedData[titleHolder]] += 1;
@@ -91,7 +123,7 @@ function populateChart(chart, chartLabels, chartData, year, titleHolder, indexed
         }
     }
 
-    chart.options.plugins.title.text = `מספר ${titlePluralHebrewName} בתום עונת ${year}`;
+    chartTitleElement.innerHTML = `מספר ${titlePluralHebrewName} בתום עונת ${year}`;
 
     let sortableTempDict = Object.fromEntries(chartLabels.map((_, i) => [chartLabels[i], chartData[i]]));
     sortedData = Object.entries(sortableTempDict).sort(([, a], [, b]) => b - a).reduce((r, [k, v]) => ({ ...r, [k]: v }), {});
@@ -113,7 +145,7 @@ async function iterateYears(data) {
     
     let [ championshipsChart, championshipsChartLabels, championshipsChartData ] = createChart(championshipsChartCanvas, 'מספר אליפויות', teamsToColors, championshipsIndexToTeamsInData);
     let [ cupsChart, cupsChartLabels, cupsChartData ] = createChart(cupsChartCanvas, 'מספר גביעים', teamsToColors, cupsIndexToTeamsInData);
-    
+
     const timer = ms => new Promise(res => setTimeout(res, ms));
 
     let {fromYear, toYear} = getQueryParams();
@@ -124,9 +156,9 @@ async function iterateYears(data) {
             continue;
         }   
 
-        populateChart(championshipsChart, championshipsChartLabels, championshipsChartData, year, yearData["champion"], championshipsIndexToTeamsInData, "אליפויות");
+        populateChart(championshipsChart, championshipsChartLabels, championshipsChartData, year, yearData["champion"], championshipsIndexToTeamsInData, "אליפויות", championshipsChartTitleElement);
 
-        populateChart(cupsChart, cupsChartLabels, cupsChartData, year, yearData["cup"], cupsIndexToTeamsInData, "גביעים");
+        populateChart(cupsChart, cupsChartLabels, cupsChartData, year, yearData["cup"], cupsIndexToTeamsInData, "גביעים", cupsChartTitleElement);
 
         await timer(750);
     }

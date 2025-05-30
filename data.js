@@ -1,375 +1,400 @@
+const BEITAR_JERUSALEM = "ביתר ירושלים";
+const BEITAR_TEL_AVIV = "ביתר תל אביב";
+const BNEY_SAKHNIN = "בני סכנין";
+const BNEY_YEHUDA = "בני יהודה";
+const BRITISH_POLICE = "המשטרה הבריטית";
+const HAKOAH_RAMAT_GAN = "הכח רמת גן";
+const HAPOEL_BEER_SHEVA = "הפועל באר שבע";
+const HAPOEL_HAIFA = "הפועל חיפה";
+const HAPOEL_JERUSALEM = "הפועל ירושלים";
+const HAPOEL_KFAR_SABA = "הפועל כפר סבא";
+const HAPOEL_LOD = "הפועל לוד";
+const HAPOEL_PETAH_TIKVA = "הפועל פתח תקווה";
+const HAPOEL_RAMAT_GAN = "הפועל רמת גן";
+const HAPOEL_TEL_AVIV = "הפועל תל אביב";
+const HAPOEL_YEHUD = "הפועל יהוד";
+const IRONI_KIRYAT_SHMONA = "עירוני קריית שמונה";
+const MACCABI_HAIFA = "מכבי חיפה";
+const MACCABI_NETANYA = "מכבי נתניה";
+const MACCABI_PETAH_TIKVA = "מכבי פתח תקווה";
+const MACCABI_TEL_AVIV = "מכבי תל אביב";
+
 data = {
     "teams_colors": {
-        "המשטרה הבריטית": "rgba(54, 162, 235, 1)",
-        "בני יהודה": "rgba(255, 159, 64, 1)",
-        "מכבי חיפה": "rgba(11, 156, 49, 1)",
-        "הכח רמת גן": "rgba(153, 102, 255, 1)",
-        "הפועל פתח תקווה": "rgba(54, 162, 235, 1)",
-        "הפועל באר שבע": "rgba(255, 99, 132, 1)",
-        "הפועל כפר סבא": "rgba(11, 156, 49, 1)",
-        "הפועל תל אביב": "rgba(255, 99, 132, 1)",
-        "ביתר ירושלים": "rgba(255, 206, 86, 1)",
-        "עירוני קריית שמונה": "rgba(54, 162, 235, 1)",
-        "מכבי נתניה": "rgba(255, 206, 86, 1)",
-        "הפועל חיפה": "rgba(255, 99, 132, 1)",
-        "מכבי תל אביב": "rgba(255, 206, 86, 1)",
-        "הפועל רמת גן": "rgba(255, 99, 132, 1)",
-        "ביתר תל אביב": "rgba(54, 162, 235, 1)",
-        "מכבי פתח תקווה": "rgba(54, 162, 235, 1)",
-        "בני סכנין": "rgba(255, 99, 132, 1)",
-        "הפועל יהוד": "rgba(54, 162, 235, 1)",
-        "הפועל לוד": "rgba(255, 99, 132, 1)",
-        "הפועל ירושלים": "rgba(255, 99, 132, 1)"
+        [BEITAR_JERUSALEM]: "rgba(255, 206, 86, 1)",
+        [BEITAR_TEL_AVIV]: "rgba(54, 162, 235, 1)",
+        [BNEY_SAKHNIN]: "rgba(255, 99, 132, 1)",
+        [BNEY_YEHUDA]: "rgba(255, 159, 64, 1)",
+        [BRITISH_POLICE]: "rgba(54, 162, 235, 1)",
+        [HAKOAH_RAMAT_GAN]: "rgba(153, 102, 255, 1)",
+        [HAPOEL_BEER_SHEVA]: "rgba(255, 99, 132, 1)",
+        [HAPOEL_HAIFA]: "rgba(255, 99, 132, 1)",
+        [HAPOEL_JERUSALEM]: "rgba(255, 99, 132, 1)",
+        [HAPOEL_KFAR_SABA]: "rgba(11, 156, 49, 1)",
+        [HAPOEL_LOD]: "rgba(255, 99, 132, 1)",
+        [HAPOEL_PETAH_TIKVA]: "rgba(54, 162, 235, 1)",
+        [HAPOEL_RAMAT_GAN]: "rgba(255, 99, 132, 1)",
+        [HAPOEL_TEL_AVIV]: "rgba(255, 99, 132, 1)",
+        [HAPOEL_YEHUD]: "rgba(54, 162, 235, 1)",
+        [IRONI_KIRYAT_SHMONA]: "rgba(54, 162, 235, 1)",
+        [MACCABI_HAIFA]: "rgba(11, 156, 49, 1)",
+        [MACCABI_NETANYA]: "rgba(255, 206, 86, 1)",
+        [MACCABI_PETAH_TIKVA]: "rgba(54, 162, 235, 1)",
+        [MACCABI_TEL_AVIV]: "rgba(255, 206, 86, 1)",
     },
     "titles": {
         "1929": {
-            "cup": "מכבי תל אביב"
+            "cup": MACCABI_TEL_AVIV
         },
         "1930": {
-            "cup": "מכבי תל אביב"
+            "cup": MACCABI_TEL_AVIV
         },
         "1932": {
-            "champion": "המשטרה הבריטית",
-            "cup": "המשטרה הבריטית"
+            "champion": BRITISH_POLICE,
+            "cup": BRITISH_POLICE
         },
         "1933": {
-            "cup": "מכבי תל אביב"
+            "cup": MACCABI_TEL_AVIV
         },
         "1934": {
-            "champion": "הפועל תל אביב",
-            "cup": "הפועל תל אביב"
+            "champion": HAPOEL_TEL_AVIV,
+            "cup": HAPOEL_TEL_AVIV
         },
         "1935": {
-            "champion": "הפועל תל אביב",
-            "cup": "מכבי פתח תקווה"
+            "champion": HAPOEL_TEL_AVIV,
+            "cup": MACCABI_PETAH_TIKVA
         },
         "1936": {
-            "champion": "מכבי תל אביב"
+            "champion": MACCABI_TEL_AVIV
         },
         "1937": {
-            "champion": "מכבי תל אביב",
-            "cup": "הפועל תל אביב"
+            "champion": MACCABI_TEL_AVIV,
+            "cup": HAPOEL_TEL_AVIV
         },
         "1938": {
-            "champion": "הפועל תל אביב",
-            "cup": "הפועל תל אביב"
+            "champion": HAPOEL_TEL_AVIV,
+            "cup": HAPOEL_TEL_AVIV
         },
         "1939": {
-            "champion": "מכבי תל אביב",
-            "cup": "הפועל תל אביב"
+            "champion": MACCABI_TEL_AVIV,
+            "cup": HAPOEL_TEL_AVIV
         },
         "1940": {
-            "champion": "הפועל תל אביב",
-            "cup": "ביתר תל אביב"
+            "champion": HAPOEL_TEL_AVIV,
+            "cup": BEITAR_TEL_AVIV
         },
         "1941": {
-            "cup": "מכבי תל אביב"
+            "cup": MACCABI_TEL_AVIV
         },
         "1942": {
-            "champion": "מכבי תל אביב",
-            "cup": "ביתר תל אביב"
+            "champion": MACCABI_TEL_AVIV,
+            "cup": BEITAR_TEL_AVIV
         },
         "1944": {
-            "champion": "הפועל תל אביב"
+            "champion": HAPOEL_TEL_AVIV
         },
         "1945": {
-            "champion": "הפועל תל אביב",
-            "cup": "הפועל תל אביב"
+            "champion": HAPOEL_TEL_AVIV,
+            "cup": HAPOEL_TEL_AVIV
         },
         "1946": {
-            "cup": "מכבי תל אביב"
+            "cup": MACCABI_TEL_AVIV
         },
         "1947": {
-            "champion": "מכבי תל אביב",
-            "cup": "מכבי תל אביב"
+            "champion": MACCABI_TEL_AVIV,
+            "cup": MACCABI_TEL_AVIV
         },
         "1950": {
-            "champion": "מכבי תל אביב"
+            "champion": MACCABI_TEL_AVIV
         },
         "1952": {
-            "champion": "מכבי תל אביב",
-            "cup": "מכבי פתח תקווה"
+            "champion": MACCABI_TEL_AVIV,
+            "cup": MACCABI_PETAH_TIKVA
         },
         "1954": {
-            "champion": "מכבי תל אביב",
-            "cup": "מכבי תל אביב"
+            "champion": MACCABI_TEL_AVIV,
+            "cup": MACCABI_TEL_AVIV
         },
         "1955": {
-            "champion": "הפועל פתח תקווה",
-            "cup": "מכבי תל אביב"
+            "champion": HAPOEL_PETAH_TIKVA,
+            "cup": MACCABI_TEL_AVIV
         },
         "1956": {
-            "champion": "מכבי תל אביב"
+            "champion": MACCABI_TEL_AVIV
         },
         "1957": {
-            "champion": "הפועל תל אביב",
-            "cup": "הפועל פתח תקווה"
+            "champion": HAPOEL_TEL_AVIV,
+            "cup": HAPOEL_PETAH_TIKVA
         },
         "1958": {
-            "champion": "מכבי תל אביב",
-            "cup": "מכבי תל אביב"
+            "champion": MACCABI_TEL_AVIV,
+            "cup": MACCABI_TEL_AVIV
         },
         "1959": {
-            "champion": "הפועל פתח תקווה",
-            "cup": "מכבי תל אביב"
+            "champion": HAPOEL_PETAH_TIKVA,
+            "cup": MACCABI_TEL_AVIV
         },
         "1960": {
-            "champion": "הפועל פתח תקווה"
+            "champion": HAPOEL_PETAH_TIKVA
         },
         "1961": {
-            "champion": "הפועל פתח תקווה",
-            "cup": "הפועל תל אביב"
+            "champion": HAPOEL_PETAH_TIKVA,
+            "cup": HAPOEL_TEL_AVIV
         },
         "1962": {
-            "champion": "הפועל פתח תקווה",
-            "cup": "מכבי חיפה"
+            "champion": HAPOEL_PETAH_TIKVA,
+            "cup": MACCABI_HAIFA
         },
         "1963": {
-            "champion": "הפועל פתח תקווה",
-            "cup": "הפועל חיפה"
+            "champion": HAPOEL_PETAH_TIKVA,
+            "cup": HAPOEL_HAIFA
         },
         "1964": {
-            "champion": "הפועל רמת גן",
-            "cup": "מכבי תל אביב"
+            "champion": HAPOEL_RAMAT_GAN,
+            "cup": MACCABI_TEL_AVIV
         },
         "1965": {
-            "champion": "הכח רמת גן",
-            "cup": "מכבי תל אביב"
+            "champion": HAKOAH_RAMAT_GAN,
+            "cup": MACCABI_TEL_AVIV
         },
         "1966": {
-            "champion": "הפועל תל אביב",
-            "cup": "הפועל חיפה"
+            "champion": HAPOEL_TEL_AVIV,
+            "cup": HAPOEL_HAIFA
         },
         "1967": {
-            "cup": "מכבי תל אביב"
+            "cup": MACCABI_TEL_AVIV
         },
         "1968": {
-            "champion": "מכבי תל אביב",
-            "cup": "בני יהודה"
+            "champion": MACCABI_TEL_AVIV,
+            "cup": BNEY_YEHUDA
         },
         "1969": {
-            "champion": "הפועל תל אביב",
-            "cup": "הכח רמת גן"
+            "champion": HAPOEL_TEL_AVIV,
+            "cup": HAKOAH_RAMAT_GAN
         },
         "1970": {
-            "champion": "מכבי תל אביב",
-            "cup": "מכבי תל אביב"
+            "champion": MACCABI_TEL_AVIV,
+            "cup": MACCABI_TEL_AVIV
         },
         "1971": {
-            "champion": "מכבי נתניה",
-            "cup": "הכח רמת גן"
+            "champion": MACCABI_NETANYA,
+            "cup": HAKOAH_RAMAT_GAN
         },
         "1972": {
-            "champion": "מכבי תל אביב",
-            "cup": "הפועל תל אביב"
+            "champion": MACCABI_TEL_AVIV,
+            "cup": HAPOEL_TEL_AVIV
         },
         "1973": {
-            "champion": "הכח רמת גן",
-            "cup": "הפועל ירושלים"
+            "champion": HAKOAH_RAMAT_GAN,
+            "cup": HAPOEL_JERUSALEM
         },
         "1974": {
-            "champion": "מכבי נתניה",
-            "cup": "הפועל חיפה"
+            "champion": MACCABI_NETANYA,
+            "cup": HAPOEL_HAIFA
         },
         "1975": {
-            "champion": "הפועל באר שבע",
-            "cup": "הפועל כפר סבא"
+            "champion": HAPOEL_BEER_SHEVA,
+            "cup": HAPOEL_KFAR_SABA
         },
         "1976": {
-            "champion": "הפועל באר שבע",
-            "cup": "ביתר ירושלים"
+            "champion": HAPOEL_BEER_SHEVA,
+            "cup": BEITAR_JERUSALEM
         },
         "1977": {
-            "champion": "מכבי תל אביב",
-            "cup": "מכבי תל אביב"
+            "champion": MACCABI_TEL_AVIV,
+            "cup": MACCABI_TEL_AVIV
         },
         "1978": {
-            "champion": "מכבי נתניה",
-            "cup": "מכבי נתניה"
+            "champion": MACCABI_NETANYA,
+            "cup": MACCABI_NETANYA
         },
         "1979": {
-            "champion": "מכבי תל אביב",
-            "cup": "ביתר ירושלים"
+            "champion": MACCABI_TEL_AVIV,
+            "cup": BEITAR_JERUSALEM
         },
         "1980": {
-            "champion": "מכבי נתניה",
-            "cup": "הפועל כפר סבא"
+            "champion": MACCABI_NETANYA,
+            "cup": HAPOEL_KFAR_SABA
         },
         "1981": {
-            "champion": "הפועל תל אביב",
-            "cup": "בני יהודה"
+            "champion": HAPOEL_TEL_AVIV,
+            "cup": BNEY_YEHUDA
         },
         "1982": {
-            "champion": "הפועל כפר סבא",
-            "cup": "הפועל יהוד"
+            "champion": HAPOEL_KFAR_SABA,
+            "cup": HAPOEL_YEHUD
         },
         "1983": {
-            "champion": "מכבי נתניה",
-            "cup": "הפועל תל אביב"
+            "champion": MACCABI_NETANYA,
+            "cup": HAPOEL_TEL_AVIV
         },
         "1984": {
-            "champion": "מכבי חיפה",
-            "cup": "הפועל לוד"
+            "champion": MACCABI_HAIFA,
+            "cup": HAPOEL_LOD
         },
         "1985": {
-            "champion": "מכבי חיפה",
-            "cup": "ביתר ירושלים"
+            "champion": MACCABI_HAIFA,
+            "cup": BEITAR_JERUSALEM
         },
         "1986": {
-            "champion": "הפועל תל אביב",
-            "cup": "ביתר ירושלים"
+            "champion": HAPOEL_TEL_AVIV,
+            "cup": BEITAR_JERUSALEM
         },
         "1987": {
-            "champion": "ביתר ירושלים",
-            "cup": "מכבי תל אביב"
+            "champion": BEITAR_JERUSALEM,
+            "cup": MACCABI_TEL_AVIV
         },
         "1988": {
-            "champion": "הפועל תל אביב",
-            "cup": "מכבי תל אביב"
+            "champion": HAPOEL_TEL_AVIV,
+            "cup": MACCABI_TEL_AVIV
         },
         "1989": {
-            "champion": "מכבי חיפה",
-            "cup": "ביתר ירושלים"
+            "champion": MACCABI_HAIFA,
+            "cup": BEITAR_JERUSALEM
         },
         "1990": {
-            "champion": "בני יהודה",
-            "cup": "הפועל כפר סבא"
+            "champion": BNEY_YEHUDA,
+            "cup": HAPOEL_KFAR_SABA
         },
         "1991": {
-            "champion": "מכבי חיפה",
-            "cup": "מכבי חיפה"
+            "champion": MACCABI_HAIFA,
+            "cup": MACCABI_HAIFA
         },
         "1992": {
-            "champion": "מכבי תל אביב",
-            "cup": "הפועל פתח תקווה"
+            "champion": MACCABI_TEL_AVIV,
+            "cup": HAPOEL_PETAH_TIKVA
         },
         "1993": {
-            "champion": "ביתר ירושלים",
-            "cup": "מכבי חיפה"
+            "champion": BEITAR_JERUSALEM,
+            "cup": MACCABI_HAIFA
         },
         "1994": {
-            "champion": "מכבי חיפה",
-            "cup": "מכבי תל אביב"
+            "champion": MACCABI_HAIFA,
+            "cup": MACCABI_TEL_AVIV
         },
         "1995": {
-            "champion": "מכבי תל אביב",
-            "cup": "מכבי חיפה"
+            "champion": MACCABI_TEL_AVIV,
+            "cup": MACCABI_HAIFA
         },
         "1996": {
-            "champion": "מכבי תל אביב",
-            "cup": "מכבי תל אביב"
+            "champion": MACCABI_TEL_AVIV,
+            "cup": MACCABI_TEL_AVIV
         },
         "1997": {
-            "champion": "ביתר ירושלים",
-            "cup": "הפועל באר שבע"
+            "champion": BEITAR_JERUSALEM,
+            "cup": HAPOEL_BEER_SHEVA
         },
         "1998": {
-            "champion": "ביתר ירושלים",
-            "cup": "מכבי חיפה"
+            "champion": BEITAR_JERUSALEM,
+            "cup": MACCABI_HAIFA
         },
         "1999": {
-            "champion": "הפועל חיפה",
-            "cup": "הפועל תל אביב"
+            "champion": HAPOEL_HAIFA,
+            "cup": HAPOEL_TEL_AVIV
         },
         "2000": {
-            "champion": "הפועל תל אביב",
-            "cup": "הפועל תל אביב"
+            "champion": HAPOEL_TEL_AVIV,
+            "cup": HAPOEL_TEL_AVIV
         },
         "2001": {
-            "champion": "מכבי חיפה",
-            "cup": "מכבי תל אביב"
+            "champion": MACCABI_HAIFA,
+            "cup": MACCABI_TEL_AVIV
         },
         "2002": {
-            "champion": "מכבי חיפה",
-            "cup": "מכבי תל אביב"
+            "champion": MACCABI_HAIFA,
+            "cup": MACCABI_TEL_AVIV
         },
         "2003": {
-            "champion": "מכבי תל אביב",
-            "cup": "הפועל רמת גן"
+            "champion": MACCABI_TEL_AVIV,
+            "cup": HAPOEL_RAMAT_GAN
         },
         "2004": {
-            "champion": "מכבי חיפה",
-            "cup": "בני סכנין"
+            "champion": MACCABI_HAIFA,
+            "cup": BNEY_SAKHNIN
         },
         "2005": {
-            "champion": "מכבי חיפה",
-            "cup": "מכבי תל אביב"
+            "champion": MACCABI_HAIFA,
+            "cup": MACCABI_TEL_AVIV
         },
         "2006": {
-            "champion": "מכבי חיפה",
-            "cup": "הפועל תל אביב"
+            "champion": MACCABI_HAIFA,
+            "cup": HAPOEL_TEL_AVIV
         },
         "2007": {
-            "champion": "ביתר ירושלים",
-            "cup": "הפועל תל אביב"
+            "champion": BEITAR_JERUSALEM,
+            "cup": HAPOEL_TEL_AVIV
         },
         "2008": {
-            "champion": "ביתר ירושלים",
-            "cup": "ביתר ירושלים"
+            "champion": BEITAR_JERUSALEM,
+            "cup": BEITAR_JERUSALEM
         },
         "2009": {
-            "champion": "מכבי חיפה",
-            "cup": "ביתר ירושלים"
+            "champion": MACCABI_HAIFA,
+            "cup": BEITAR_JERUSALEM
         },
         "2010": {
-            "champion": "הפועל תל אביב",
-            "cup": "הפועל תל אביב"
+            "champion": HAPOEL_TEL_AVIV,
+            "cup": HAPOEL_TEL_AVIV
         },
         "2011": {
-            "champion": "מכבי חיפה",
-            "cup": "הפועל תל אביב"
+            "champion": MACCABI_HAIFA,
+            "cup": HAPOEL_TEL_AVIV
         },
         "2012": {
-            "champion": "עירוני קריית שמונה",
-            "cup": "הפועל תל אביב"
+            "champion": IRONI_KIRYAT_SHMONA,
+            "cup": HAPOEL_TEL_AVIV
         },
         "2013": {
-            "champion": "מכבי תל אביב",
-            "cup": "הפועל רמת גן"
+            "champion": MACCABI_TEL_AVIV,
+            "cup": HAPOEL_RAMAT_GAN
         },
         "2014": {
-            "champion": "מכבי תל אביב",
-            "cup": "עירוני קריית שמונה"
+            "champion": MACCABI_TEL_AVIV,
+            "cup": IRONI_KIRYAT_SHMONA
         },
         "2015": {
-            "champion": "מכבי תל אביב",
-            "cup": "מכבי תל אביב"
+            "champion": MACCABI_TEL_AVIV,
+            "cup": MACCABI_TEL_AVIV
         },
         "2016": {
-            "champion": "הפועל באר שבע",
-            "cup": "מכבי חיפה"
+            "champion": HAPOEL_BEER_SHEVA,
+            "cup": MACCABI_HAIFA
         },
         "2017": {
-            "champion": "הפועל באר שבע",
-            "cup": "בני יהודה"
+            "champion": HAPOEL_BEER_SHEVA,
+            "cup": BNEY_YEHUDA
         },
         "2018": {
-            "champion": "הפועל באר שבע",
-            "cup": "הפועל חיפה"
+            "champion": HAPOEL_BEER_SHEVA,
+            "cup": HAPOEL_HAIFA
         },
         "2019": {
-            "champion": "מכבי תל אביב",
-            "cup": "בני יהודה"
+            "champion": MACCABI_TEL_AVIV,
+            "cup": BNEY_YEHUDA
         },
         "2020": {
-            "champion": "מכבי תל אביב",
-            "cup": "הפועל באר שבע"
+            "champion": MACCABI_TEL_AVIV,
+            "cup": HAPOEL_BEER_SHEVA
         },
         "2021": {
-            "champion": "מכבי חיפה",
-            "cup": "מכבי תל אביב"
+            "champion": MACCABI_HAIFA,
+            "cup": MACCABI_TEL_AVIV
         },
         "2022": {
-            "champion": "מכבי חיפה",
-            "cup": "הפועל באר שבע"
+            "champion": MACCABI_HAIFA,
+            "cup": HAPOEL_BEER_SHEVA
         },
         "2023": {
-            "champion": "מכבי חיפה",
-            "cup": "ביתר ירושלים"
+            "champion": MACCABI_HAIFA,
+            "cup": BEITAR_JERUSALEM
         },
         "2024": {
-            "champion": "מכבי תל אביב",
-            "cup": "מכבי פתח תקווה"
+            "champion": MACCABI_TEL_AVIV,
+            "cup": MACCABI_PETAH_TIKVA
+        },
+        "2025": {
+            "champion": MACCABI_TEL_AVIV,
+            "cup": HAPOEL_BEER_SHEVA
         },
     }
-}
+};

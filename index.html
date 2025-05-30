@@ -10,14 +10,25 @@
     <link rel="stylesheet" href="index.css">
 </head>
 
-<body onload="loadData()"> 
-    <div class="container">
+<body onload="loadData()">
+    <div class="container py-4">
+        <h1 class="text-center text-light mb-4 display-4 font-weight-bold shadow-sm">תארים בתום כל עונה</h1>
         <div class="row">
-            <div class="col graph-container">
-                <canvas id="championships-chart"></canvas>
+            <div class="col-md-6 mb-4">
+                <div class="card bg-dark text-white shadow-lg rounded-lg">
+                    <div id="championships-chart-title" class="card-header text-center font-weight-bold">אליפויות</div>
+                    <div class="card-body graph-container">
+                        <canvas id="championships-chart"></canvas>
+                    </div>
+                </div>
             </div>
-            <div class="col graph-container">
-                <canvas id="cups-chart"></canvas>
+            <div class="col-md-6 mb-4">
+                <div class="card bg-dark text-white shadow-lg rounded-lg">
+                    <div id="cups-chart-title" class="card-header text-center font-weight-bold">גביעים</div>
+                    <div class="card-body graph-container">
+                        <canvas id="cups-chart"></canvas>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
