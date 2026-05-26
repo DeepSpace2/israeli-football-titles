@@ -396,5 +396,9 @@ data = {
             "champion": MACCABI_TEL_AVIV,
             "cup": HAPOEL_BEER_SHEVA
         },
+        "2026": {
+            "champion": HAPOEL_BEER_SHEVA,
+            "cup": MACCABI_TEL_AVIV,
+        },
     }
 };
